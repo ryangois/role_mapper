@@ -1,7 +1,19 @@
+import Select from '../Select'
 import TextField from '../TextField'
 import './Form.css'
 
 const Form = () => {
+
+    const times = [
+        'Fullstack',
+        'Front-End',
+        'Back-End',
+        'Ux & Design',
+        'Mobile',
+        'QA',
+        'Data Science'
+    ]
+
     return (
         <section className='form'>
             <form>
@@ -9,7 +21,8 @@ const Form = () => {
                 </h2>
                 <TextField label="Name" placeholder="Write a Name" />
                 <TextField label="Role" placeholder="Write a Role" />
-                <TextField label="Image" placeholder="Write the image adress" />
+                <TextField label="Image" placeholder="http://" />
+                <Select label="Team" itens={times} />
             </form>
         </section>
     )
