@@ -1,3 +1,4 @@
+import Button from '../Button'
 import Select from '../Select'
 import TextField from '../TextField'
 import './Form.css'
@@ -23,6 +24,9 @@ const Form = () => {
                 <TextField label="Role" placeholder="Write a Role" />
                 <TextField label="Image" placeholder="http://" />
                 <Select label="Team" itens={times} />
+                <Button>
+                    Create Card
+                </Button>
             </form>
         </section>
     )
