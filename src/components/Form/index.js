@@ -4,7 +4,7 @@ import Select from '../Select'
 import TextField from '../TextField'
 import './Form.css'
 
-const Form = () => {
+const Form = (props) => {
 
     const teams = [
         '',
@@ -24,8 +24,14 @@ const Form = () => {
 
     const onSave = (e) => {
         e.preventDefault()
-        console.log('Form submited =>', name, role, image, team);
+        props.onSubmited({
+            name,
+            role,
+            image,
+            team
+        })
     }
+
     return (
         <section className='form'>
             <form onSubmit={onSave}>
