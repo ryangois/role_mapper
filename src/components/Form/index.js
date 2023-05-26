@@ -6,17 +6,6 @@ import './Form.css'
 
 const Form = (props) => {
 
-    const teams = [
-        '',
-        'Fullstack',
-        'Front-End',
-        'Back-End',
-        'Ux & Design',
-        'Mobile',
-        'QA',
-        'Data Science'
-    ]
-
     const [name, setName] = useState('')
     const [role, setRole] = useState('')
     const [image, setImage] = useState('')
@@ -57,7 +46,7 @@ const Form = (props) => {
                 />
                 <Select
                     label="Team"
-                    itens={teams}
+                    itens={props.teams}
                     value={team}
                     onChanged={value => setTeam(value)}
                 />
