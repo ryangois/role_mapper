@@ -44,7 +44,7 @@ const Form = (props) => {
                 />
                 <TextField
                     label="GitHub"
-                    placeholder="http://"
+                    placeholder="GitHub username"
                     value={image}
                     onChanged={value => setImage(value)}
                 />
