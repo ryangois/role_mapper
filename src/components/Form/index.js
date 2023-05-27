@@ -39,7 +39,7 @@ const Form = (props) => {
                     onChanged={value => setRole(value)}
                 />
                 <TextField
-                    label="Image"
+                    label="GitHub"
                     placeholder="http://"
                     value={image}
                     onChanged={value => setImage(value)}
