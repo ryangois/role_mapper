@@ -1,10 +1,10 @@
 import './Colaborator.css'
 
-const Colaborator = ({ name, image, role }) => {
+const Colaborator = ({ name, image, role, backgroundColor }) => {
     return (
         <a className='card' href={image} target="_blank" rel="noopener noreferrer">
             <div className='colaborator'>
-                <div className='header'>
+                <div className='header' style={{ backgroundColor: backgroundColor }}>
 
                     <img src={"https://github.com/" + image + ".png"} alt='props.name' />
                 </div>
