@@ -1,9 +1,9 @@
 import './Banner.css'
 
 function Banner() {
-    return(
+    return (
         <header className="banner">
-        <img src="/images/banner.png" alt="main banner"></img>
+            <img src="/images/banner.png" alt="main banner"></img>
         </header>
     )
 }
