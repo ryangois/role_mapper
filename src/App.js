@@ -164,17 +164,17 @@ function App() {
   const [colaboradores, setColaboradores] = useState(inicial)
 
   function deletarColaborador() {
-    console.log('deletando colaborador');
+    console.log('deletando colaborator');
   }
 
 
   return (
     <div>
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
+      <Formulario times={times.map(time => time.nome)} aoCadastrar={colaborator => setColaboradores([...colaboradores, colaborator])} />
       <section className="times">
         <h1>Minha organização</h1>
-        {times.map((time, indice) => <Time key={indice} time={time} colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)} aoDeletar={deletarColaborador} />)}
+        {times.map((time, indice) => <Time key={indice} time={time} colaboradores={colaboradores.filter(colaborator => colaborator.time === time.nome)} aoDeletar={deletarColaborador} />)}
       </section>
       <Rodape />
     </div>

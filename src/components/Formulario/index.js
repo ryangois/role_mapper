@@ -25,7 +25,7 @@ const Formulario = ({ aoCadastrar, teams }) => {
     return (
         <section className="formulario-container">
             <form className="formulario" onSubmit={aoSubmeter}>
-                <h2>Preencha os dados para criar o card do colaborador.</h2>
+                <h2>Preencha os dados para criar o card do colaborator.</h2>
                 <TextField
                     obrigatorio={true}
                     label='name'
