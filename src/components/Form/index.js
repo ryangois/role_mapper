@@ -4,7 +4,7 @@ import Select from '../Select'
 import TextField from '../TextField'
 import './Form.css'
 
-const Form = (props) => {
+const Form = ({onSubmited, teams}) => {
 
     const [name, setName] = useState('')
     const [role, setRole] = useState('')
@@ -13,7 +13,7 @@ const Form = (props) => {
 
     const onSave = (e) => {
         e.preventDefault()
-        props.onSubmited({
+        onSubmited({
             name,
             role,
             image,
@@ -50,7 +50,7 @@ const Form = (props) => {
                 />
                 <Select
                     label="Team"
-                    itens={props.teams}
+                    itens={teams}
                     value={team}
                     onChanged={value => setTeam(value)}
                 />
