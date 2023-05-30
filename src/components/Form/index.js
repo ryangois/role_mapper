@@ -13,16 +13,17 @@ const Form = ({onSubmited, teams}) => {
 
     const onSave = (e) => {
         e.preventDefault()
+        console.log('form enviado', name, role, image, team )
         onSubmited({
             name,
             role,
             image,
             team
         })
-        setName("")
-        setRole("")
-        setImage("")
-        setTeam("")
+        // setName("")
+        // setRole("")
+        // setImage("")
+        // setTeam("")
     }
 
     return (
@@ -30,6 +31,7 @@ const Form = ({onSubmited, teams}) => {
             <form onSubmit={onSave}>
                 <h2>Fill in the data to create the collaborator's card.</h2>
                 <TextField
+                    required={true}
                     label="Name"
                     placeholder="Write a Name"
                     value={name}
@@ -37,26 +39,27 @@ const Form = ({onSubmited, teams}) => {
                 />
 
                 <TextField
+                    required={true}
                     label="Role"
                     placeholder="Write a Role"
                     value={role}
                     onChanged={value => setRole(value)}
                 />
                 <TextField
+                    required={true}
                     label="GitHub"
                     placeholder="GitHub username"
                     value={image}
                     onChanged={value => setImage(value)}
                 />
                 <Select
+                    required={true}
                     label="Team"
-                    itens={teams}
+                    items={teams}
                     value={team}
                     onChanged={value => setTeam(value)}
                 />
-                <Button>
-                    Create Card
-                </Button>
+                <Button text={'Create Card'} />
             </form>
         </section>
     )
