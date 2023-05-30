@@ -4,6 +4,7 @@ import './Team.css'
 const Team = (props, onDelete) => {
     return (
         props.colaborators.length > 0 && <section className='team' style={{ backgroundColor: props.secondaryColor }}>
+            <input value={props.primaryColor} type='color' className='color-input' />
             <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
             <div className='colaborators'>
                 {props.colaborators.map(colaborator => {
