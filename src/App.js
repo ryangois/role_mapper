@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Banner from "./componentes/Banner";
 import Formulario from "./componentes/Formulario";
-import Rodape from "./componentes/Rodape";
+import Footer from "./componentes/Footer";
 import Time from "./componentes/Time";
 
 function App() {
@@ -176,7 +176,7 @@ function App() {
         <h1>Minha organização</h1>
         {times.map((time, indice) => <Time key={indice} time={time} colaboradores={colaboradores.filter(colaborator => colaborator.time === time.nome)} aoDeletar={deletarColaborador} />)}
       </section>
-      <Rodape />
+      <Footer />
     </div>
   );
 }

@@ -9,7 +9,7 @@ const Colaborator = ({ colaborator, corDeFundo, aoDeletar }) => {
             <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
                 <a href={userGitHub} target="_blank" rel="noopener noreferrer"><img src={userGitHub + ".png"} alt={colaborator.nome} /></a>
             </div>
-            <div className="rodape">
+            <div className="footer">
                 <h4>{colaborator.nome}</h4>
                 <h5>{colaborator.cargo}</h5>
             </div>
