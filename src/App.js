@@ -72,7 +72,7 @@ function App() {
     {
       nome: 'DANIEL ARTINE',
       cargo: 'Engenheiro de Software na Stone Age',
-      imagem: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      imagem: 'danielartine',
       time: times[1].nome
     },
     {

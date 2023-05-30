@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Button from '../Button'
-import CampoTexto from '../CampoTexto'
+import TextField from '../TextField'
 import ListaSuspensa from '../ListaSuspensa'
 import './formulario.css'
 
@@ -26,19 +26,19 @@ const Formulario = ({aoCadastrar, times}) => {
         <section className="formulario-container">
             <form className="formulario" onSubmit={aoSubmeter}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
-                <CampoTexto
+                <TextField
                     obrigatorio={true}
                     label='Nome'
                     placeholder='Digite seu nome '
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}/>
-                <CampoTexto
+                <TextField
                     obrigatorio={true}
                     label='Cargo' 
                     placeholder='Digite seu cargo '
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}/>
-                <CampoTexto 
+                <TextField 
                     label='Imagem' 
                     placeholder='Informe o endereço da imagem '
                     aoAlterado={valor => setImagem(valor)}/>
