@@ -49,18 +49,25 @@ function App() {
     setColaborator([...colaborators, colaborator])
   }
 
+  function deleteColaborator() {
+    console.log("deletando");
+  }
+
   return (
     <div className="App">
       <Banner />
       <Form teams={teams.map(team => team.name)} onSubmited={colaborator => onNewColaborator(colaborator)} />
 
-      {teams.map(team => <Team
+      {teams.map(team => 
+      <Team
         key={team.name}
         name={team.name}
         primaryColor={team.primaryColor}
         secondaryColor={team.secondaryColor}
         colaborators={colaborators.filter(colaborator => colaborator.team === team.name)}
-      />)}
+        onDelete={deleteColaborator}
+      />)
+      }
     </div>
   );
 }
