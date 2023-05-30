@@ -4,7 +4,7 @@ import TextField from '../TextField'
 import ListaSuspensa from '../ListaSuspensa'
 import './formulario.css'
 
-const Formulario = ({aoCadastrar, times}) => {
+const Formulario = ({ aoCadastrar, times }) => {
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -13,7 +13,7 @@ const Formulario = ({aoCadastrar, times}) => {
 
     const aoSubmeter = (evento) => {
         evento.preventDefault()
-        console.log('form enviado', nome, cargo, imagem, time )
+        console.log('form enviado', nome, cargo, imagem, time)
         aoCadastrar({
             nome,
             cargo,
@@ -28,26 +28,26 @@ const Formulario = ({aoCadastrar, times}) => {
                 <h2>Preencha os dados para criar o card do colaborator.</h2>
                 <TextField
                     obrigatorio={true}
-                    label='Nome'
+                    label='Name'
                     placeholder='Digite seu nome '
                     value={nome}
-                    aoAlterado={value => setNome(value)}/>
+                    aoAlterado={value => setNome(value)} />
                 <TextField
                     obrigatorio={true}
-                    label='Cargo' 
+                    label='Role'
                     placeholder='Digite seu cargo '
                     value={cargo}
-                    aoAlterado={value => setCargo(value)}/>
-                <TextField 
-                    label='Imagem' 
-                    placeholder='Informe o endereço da imagem '
-                    aoAlterado={value => setImagem(value)}/>
-                <ListaSuspensa 
+                    aoAlterado={value => setCargo(value)} />
+                <TextField
+                    label='GitHub'
+                    placeholder='Inform your user'
+                    aoAlterado={value => setImagem(value)} />
+                <ListaSuspensa
                     obrigatorio={true}
-                    label='Times'
-                    items={times} 
+                    label='Team'
+                    items={times}
                     value={time}
-                    aoAlterado={value => setTime(value)}/>
+                    aoAlterado={value => setTime(value)} />
                 <Button text='Create Card' />
             </form>
         </section>
