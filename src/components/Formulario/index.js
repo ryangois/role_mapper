@@ -30,25 +30,25 @@ const Formulario = ({aoCadastrar, times}) => {
                     obrigatorio={true}
                     label='Nome'
                     placeholder='Digite seu nome '
-                    valor={nome}
-                    aoAlterado={valor => setNome(valor)}/>
+                    value={nome}
+                    aoAlterado={value => setNome(value)}/>
                 <TextField
                     obrigatorio={true}
                     label='Cargo' 
                     placeholder='Digite seu cargo '
-                    valor={cargo}
-                    aoAlterado={valor => setCargo(valor)}/>
+                    value={cargo}
+                    aoAlterado={value => setCargo(value)}/>
                 <TextField 
                     label='Imagem' 
                     placeholder='Informe o endereço da imagem '
-                    aoAlterado={valor => setImagem(valor)}/>
+                    aoAlterado={value => setImagem(value)}/>
                 <ListaSuspensa 
                     obrigatorio={true}
                     label='Times'
                     items={times} 
-                    valor={time}
-                    aoAlterado={valor => setTime(valor)}/>
-                <Button texto='Criar card' />
+                    value={time}
+                    aoAlterado={value => setTime(value)}/>
+                <Button text='Create Card' />
             </form>
         </section>
     )
