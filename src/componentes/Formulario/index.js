@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Botao from '../Botao'
+import Button from '../Button'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './formulario.css'
@@ -48,7 +48,7 @@ const Formulario = ({aoCadastrar, times}) => {
                     items={times} 
                     valor={time}
                     aoAlterado={valor => setTime(valor)}/>
-                <Botao texto='Criar card' />
+                <Button texto='Criar card' />
             </form>
         </section>
     )
