@@ -1,25 +1,20 @@
-.card {
-    text-decoration: none;
-}
-
-.colaborator {
+.colaborador {
     position: relative;
     width: 280px;
 }
 
-.colaborator .header {
-    background-color: #F0F0F0;
+.colaborador .cabecalho {
+    background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
 }
-
-.colaborator img {
+.colaborador img {
     width: 100px;
     border-radius: 50%;
     position: relative;
     bottom: -50px;
 }
 
-.colaborator .footer {
+.colaborador .rodape {
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
@@ -27,7 +22,7 @@
     padding-bottom: 40px;
 }
 
-.colaborator .footer h4 {
+.colaborador .rodape h4 {
     color: #6278F7;
     font-size: 18px;
     line-height: 22px;
@@ -35,16 +30,15 @@
     margin-bottom: 8px;
 }
 
-.colaborator .footer h5 {
+.colaborador .rodape h5 {
     font-size: 18px;
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
 }
 
-.delete {
+.deletar {
     position: absolute;
     right: -10px;
     top: -10px;
-    color: black;
 }
