@@ -3,7 +3,7 @@
     width: 280px;
 }
 
-.colaborator .cabecalho {
+.colaborator .header {
     background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
 }
@@ -20,6 +20,7 @@
     border-radius: 0px 0px 10px 10px;
     padding-top: 90px;
     padding-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .colaborator .footer h4 {

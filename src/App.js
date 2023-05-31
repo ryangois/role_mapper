@@ -2,43 +2,43 @@ import { useState } from "react";
 import Banner from "./components/Banner";
 import Formulario from "./components/Formulario";
 import Footer from "./components/Footer";
-import Time from "./components/Time";
+import Team from "./components/Team";
 
 function App() {
 
-  const times = [
+  const teams = [
     {
-      nome: 'Programação',
+      name: 'Programação',
       corPrimaria: '#D9F7E9',
       corSecundaria: '#57C278'
     },
     {
-      nome: 'Front-End',
+      name: 'Front-End',
       corPrimaria: '#E8F8FF',
       corSecundaria: '#82CFFA'
     },
     {
-      nome: 'Data Science',
+      name: 'Data Science',
       corPrimaria: '#F0F8E2',
       corSecundaria: '#A6D157'
     },
     {
-      nome: 'Devops',
+      name: 'Devops',
       corPrimaria: '#FDE7E8',
       corSecundaria: '#E06B69'
     },
     {
-      nome: 'UX e Design',
+      name: 'UX e Design',
       corPrimaria: '#FAE9F5',
       corSecundaria: '#DB6EBF'
     },
     {
-      nome: 'Mobile',
+      name: 'Mobile',
       corPrimaria: '#FFF5D9',
       corSecundaria: '#FFBA05'
     },
     {
-      nome: 'Inovação e Gestão',
+      name: 'Inovação e Gestão',
       corPrimaria: '#FFEEDF',
       corSecundaria: '#FF8A29'
     },
@@ -46,118 +46,118 @@ function App() {
 
   const inicial = [
     {
-      nome: 'Ryan Gois',
-      cargo: 'Desenvolvedor de software',
-      imagem: 'ryangois',
-      time: times[0].nome
+      name: 'Ryan Gois',
+      role: 'Desenvolvedor de software',
+      image: 'ryangois',
+      team: teams[0].name
     },
     {
-      nome: 'GUILHERME LIMA',
-      cargo: 'Desenvolvedor Python e JavaScript na Alura',
-      imagem: 'guilhermeonrails',
-      time: times[0].nome
+      name: 'GUILHERME LIMA',
+      role: 'Desenvolvedor Python e JavaScript na Alura',
+      image: 'guilhermeonrails',
+      team: teams[0].name
     },
     {
-      nome: 'PAULO SILVEIRA',
-      cargo: 'Hipster e CEO da Alura',
-      imagem: 'peas',
-      time: times[0].nome
+      name: 'PAULO SILVEIRA',
+      role: 'Hipster e CEO da Alura',
+      image: 'peas',
+      team: teams[0].name
     },
     {
-      nome: 'Ryan Gois',
-      cargo: 'Desenvolvedor de software',
-      imagem: 'ryangois',
-      time: times[1].nome
+      name: 'Ryan Gois',
+      role: 'Desenvolvedor de software',
+      image: 'ryangois',
+      team: teams[1].name
     },
     {
-      nome: 'DANIEL ARTINE',
-      cargo: 'Engenheiro de Software na Stone Age',
-      imagem: 'danielartine',
-      time: times[1].nome
+      name: 'DANIEL ARTINE',
+      role: 'Engenheiro de Software na Stone Age',
+      image: 'danielartine',
+      team: teams[1].name
     },
     {
-      nome: 'GUILHERME LIMA',
-      cargo: 'Desenvolvedor Python e JavaScript na Alura',
-      imagem: '	guilhermeonrails',
-      time: times[1].nome
+      name: 'GUILHERME LIMA',
+      role: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	guilhermeonrails',
+      team: teams[1].name
     },
     {
-      nome: 'PAULO SILVEIRA',
-      cargo: 'Hipster e CEO da Alura',
-      imagem: 'peas',
-      time: times[1].nome
+      name: 'PAULO SILVEIRA',
+      role: 'Hipster e CEO da Alura',
+      image: 'peas',
+      team: teams[1].name
     },
     {
-      nome: 'Ryan Gois',
-      cargo: 'Desenvolvedor de software',
-      imagem: 'ryangois',
-      time: times[2].nome
+      name: 'Ryan Gois',
+      role: 'Desenvolvedor de software',
+      image: 'ryangois',
+      team: teams[2].name
     },
     {
-      nome: 'GUILHERME LIMA',
-      cargo: 'Desenvolvedor Python e JavaScript na Alura',
-      imagem: '	guilhermeonrails',
-      time: times[2].nome
+      name: 'GUILHERME LIMA',
+      role: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	guilhermeonrails',
+      team: teams[2].name
     },
     {
-      nome: 'PAULO SILVEIRA',
-      cargo: 'Hipster e CEO da Alura',
-      imagem: 'peas',
-      time: times[2].nome
+      name: 'PAULO SILVEIRA',
+      role: 'Hipster e CEO da Alura',
+      image: 'peas',
+      team: teams[2].name
     },
     {
-      nome: 'Ryan Gois',
-      cargo: 'Desenvolvedor de software',
-      imagem: 'ryangois',
-      time: times[3].nome
+      name: 'Ryan Gois',
+      role: 'Desenvolvedor de software',
+      image: 'ryangois',
+      team: teams[3].name
     },
     {
-      nome: 'GUILHERME LIMA',
-      cargo: 'Desenvolvedor Python e JavaScript na Alura',
-      imagem: '	guilhermeonrails',
-      time: times[3].nome
+      name: 'GUILHERME LIMA',
+      role: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	guilhermeonrails',
+      team: teams[3].name
     },
     {
-      nome: 'PAULO SILVEIRA',
-      cargo: 'Hipster e CEO da Alura',
-      imagem: 'peas',
-      time: times[3].nome
+      name: 'PAULO SILVEIRA',
+      role: 'Hipster e CEO da Alura',
+      image: 'peas',
+      team: teams[3].name
     },
     {
-      nome: 'Ryan Gois',
-      cargo: 'Desenvolvedor de software',
-      imagem: 'ryangois',
-      time: times[4].nome
+      name: 'Ryan Gois',
+      role: 'Desenvolvedor de software',
+      image: 'ryangois',
+      team: teams[4].name
     },
     {
-      nome: 'GUILHERME LIMA',
-      cargo: 'Desenvolvedor Python e JavaScript na Alura',
-      imagem: '	guilhermeonrails',
-      time: times[4].nome
+      name: 'GUILHERME LIMA',
+      role: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	guilhermeonrails',
+      team: teams[4].name
     },
     {
-      nome: 'PAULO SILVEIRA',
-      cargo: 'Hipster e CEO da Alura',
-      imagem: 'peas',
-      time: times[4].nome
+      name: 'PAULO SILVEIRA',
+      role: 'Hipster e CEO da Alura',
+      image: 'peas',
+      team: teams[4].name
     },
     {
-      nome: 'Ryan Gois',
-      cargo: 'Desenvolvedor de software',
-      imagem: 'ryangois',
-      time: times[5].nome
+      name: 'Ryan Gois',
+      role: 'Desenvolvedor de software',
+      image: 'ryangois',
+      team: teams[5].name
     },
     {
-      nome: 'GUILHERME LIMA',
-      cargo: 'Desenvolvedor Python e JavaScript na Alura',
-      imagem: 'guilhermeonrails',
-      time: times[5].nome
+      name: 'GUILHERME LIMA',
+      role: 'Desenvolvedor Python e JavaScript na Alura',
+      image: 'guilhermeonrails',
+      team: teams[5].name
     },
     {
-      nome: 'PAULO SILVEIRA',
-      cargo: 'Hipster e CEO da Alura',
-      imagem: 'peas',
-      time: times[5].nome
+      name: 'PAULO SILVEIRA',
+      role: 'Hipster e CEO da Alura',
+      image: 'peas',
+      team: teams[5].name
     },
   ]
 
@@ -171,10 +171,10 @@ function App() {
   return (
     <div>
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoCadastrar={colaborator => setColaboradores([...colaboradores, colaborator])} />
-      <section className="times">
+      <Formulario teams={teams.map(team => team.name)} aoCadastrar={colaborator => setColaboradores([...colaboradores, colaborator])} />
+      <section className="teams">
         <h1>Minha organização</h1>
-        {times.map((time, indice) => <Time key={indice} time={time} colaboradores={colaboradores.filter(colaborator => colaborator.time === time.nome)} aoDeletar={deletarColaborador} />)}
+        {teams.map((team, indice) => <Team key={indice} team={team} colaboradores={colaboradores.filter(colaborator => colaborator.team === team.name)} aoDeletar={deletarColaborador} />)}
       </section>
       <Footer />
     </div>

@@ -4,22 +4,23 @@ import TextField from '../TextField'
 import ListaSuspensa from '../ListaSuspensa'
 import './formulario.css'
 
-const Formulario = ({ aoCadastrar, times }) => {
+const Formulario = ({ aoCadastrar, teams }) => {
 
-    const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
-    const [imagem, setImagem] = useState('')
-    const [time, setTime] = useState('')
+    const [name, setName] = useState('')
+    const [role, setCargo] = useState('')
+    const [image, setImagem] = useState('')
+    const [team, setTime] = useState('')
 
     const aoSubmeter = (evento) => {
         evento.preventDefault()
-        console.log('form enviado', nome, cargo, imagem, time)
+        console.log('form enviado', name, role, image, team)
         aoCadastrar({
-            nome,
-            cargo,
-            imagem,
-            time
+            name,
+            role,
+            image,
+            team
         })
+        setName("")
     }
 
     return (
@@ -29,24 +30,25 @@ const Formulario = ({ aoCadastrar, times }) => {
                 <TextField
                     obrigatorio={true}
                     label='Name'
-                    placeholder='Digite seu nome '
-                    value={nome}
-                    aoAlterado={value => setNome(value)} />
+                    placeholder='Write a name'
+                    value={name}
+                    aoAlterado={value => setName(value)} />
                 <TextField
                     obrigatorio={true}
                     label='Role'
-                    placeholder='Digite seu cargo '
-                    value={cargo}
+                    placeholder='Inform the role'
+                    value={role}
                     aoAlterado={value => setCargo(value)} />
                 <TextField
+                    obrigatorio={true}
                     label='GitHub'
-                    placeholder='Inform your user'
+                    placeholder='Inform the username'
                     aoAlterado={value => setImagem(value)} />
                 <ListaSuspensa
                     obrigatorio={true}
                     label='Team'
-                    items={times}
-                    value={time}
+                    items={teams}
+                    value={team}
                     aoAlterado={value => setTime(value)} />
                 <Button text='Create Card' />
             </form>
