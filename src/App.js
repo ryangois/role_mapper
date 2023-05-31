@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Banner from "./components/Banner";
-import Formulario from "./components/Formulario";
+import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Team from "./components/Team";
 
@@ -161,20 +161,19 @@ function App() {
     },
   ]
 
-  const [colaboradores, setColaboradores] = useState(inicial)
+  const [colaborators, setColaboradores] = useState(inicial)
 
   function deletarColaborador() {
     console.log('deletando colaborator');
   }
 
-
   return (
     <div>
       <Banner />
-      <Formulario teams={teams.map(team => team.name)} aoCadastrar={colaborator => setColaboradores([...colaboradores, colaborator])} />
+      <Form teams={teams.map(team => team.name)} onRegister={colaborator => setColaboradores([...colaborators, colaborator])} />
       <section className="teams">
-        <h1>Minha organização</h1>
-        {teams.map((team, indice) => <Team key={indice} team={team} colaboradores={colaboradores.filter(colaborator => colaborator.team === team.name)} aoDeletar={deletarColaborador} />)}
+        <h1>My organization</h1>
+        {teams.map((team, indice) => <Team key={indice} team={team} colaborators={colaborators.filter(colaborator => colaborator.team === team.name)} aoDeletar={deletarColaborador} />)}
       </section>
       <Footer />
     </div>
