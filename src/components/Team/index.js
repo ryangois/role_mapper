@@ -3,10 +3,11 @@ import './team.css'
 
 const Team = ({ team, colaborators, aoDeletar }) => {
     return (
-        colaborators.length > 0 && <section className='team' style={{ backgroundImage: 'url(/images/fundo.png)', backgroundColor: team.corPrimaria }}>
-            <h3 style={{ borderColor: team.corSecundaria }}>{team.name}</h3>
+        colaborators.length > 0 && <section className='team' style={{ backgroundImage: 'url(/images/fundo.png)', backgroundColor: team.primaryColor }}>
+            <input value={team.secondaryColor} type='color' className='color-input' />
+            <h3 style={{ borderColor: team.secondaryColor }}>{team.name}</h3>
             <div className='colaborators'>
-                {colaborators.map((colaborator, indice) => <Colaborator key={indice} colaborator={colaborator} corDeFundo={team.corSecundaria} aoDeletar={aoDeletar} />)}
+                {colaborators.map((colaborator, indice) => <Colaborator key={indice} colaborator={colaborator} corDeFundo={team.secondaryColor} aoDeletar={aoDeletar} />)}
             </div>
         </section>
     )

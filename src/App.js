@@ -9,38 +9,38 @@ function App() {
   const teams = [
     {
       name: 'Programação',
-      corPrimaria: '#D9F7E9',
-      corSecundaria: '#57C278'
+      primaryColor: '#D9F7E9',
+      secondaryColor: '#57C278'
     },
     {
       name: 'Front-End',
-      corPrimaria: '#E8F8FF',
-      corSecundaria: '#82CFFA'
+      primaryColor: '#E8F8FF',
+      secondaryColor: '#82CFFA'
     },
     {
       name: 'Data Science',
-      corPrimaria: '#F0F8E2',
-      corSecundaria: '#A6D157'
+      primaryColor: '#F0F8E2',
+      secondaryColor: '#A6D157'
     },
     {
       name: 'Devops',
-      corPrimaria: '#FDE7E8',
-      corSecundaria: '#E06B69'
+      primaryColor: '#FDE7E8',
+      secondaryColor: '#E06B69'
     },
     {
       name: 'UX e Design',
-      corPrimaria: '#FAE9F5',
-      corSecundaria: '#DB6EBF'
+      primaryColor: '#FAE9F5',
+      secondaryColor: '#DB6EBF'
     },
     {
       name: 'Mobile',
-      corPrimaria: '#FFF5D9',
-      corSecundaria: '#FFBA05'
+      primaryColor: '#FFF5D9',
+      secondaryColor: '#FFBA05'
     },
     {
       name: 'Inovação e Gestão',
-      corPrimaria: '#FFEEDF',
-      corSecundaria: '#FF8A29'
+      primaryColor: '#FFEEDF',
+      secondaryColor: '#FF8A29'
     },
   ]
 
