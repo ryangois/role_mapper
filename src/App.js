@@ -6,7 +6,7 @@ import Team from "./components/Team";
 
 function App() {
 
-  const teams = [
+  const [teams, setTeams] = useState([
     {
       name: 'Programação',
       primaryColor: '#D9F7E9',
@@ -42,7 +42,7 @@ function App() {
       primaryColor: '#FFEEDF',
       secondaryColor: '#FF8A29'
     },
-  ]
+  ])
 
   const inicial = [
     {
@@ -163,8 +163,17 @@ function App() {
 
   const [colaborators, setColaboradores] = useState(inicial)
 
-  function deletarColaborador() {
+  function deleteColaborator() {
     console.log('deletando colaborator');
+  }
+
+  function teamColorChange(color, name) {
+    setTeams(teams.map(team => {
+      if (team.name === name) {
+        team.secondaryColor = color;
+      }
+      return team;
+    }));
   }
 
   return (
@@ -173,7 +182,15 @@ function App() {
       <Form teams={teams.map(team => team.name)} onRegister={colaborator => setColaboradores([...colaborators, colaborator])} />
       <section className="teams">
         <h1>My organization</h1>
-        {teams.map((team, indice) => <Team key={indice} team={team} colaborators={colaborators.filter(colaborator => colaborator.team === team.name)} aoDeletar={deletarColaborador} />)}
+        {teams.map((team, indice) =>
+          <Team
+            changeColor={teamColorChange}
+            key={indice}
+            team={team}
+            colaborators={colaborators.filter(colaborator => colaborator.team === team.name)}
+            onDelete={deleteColaborator}
+          />
+        )}
       </section>
       <Footer />
     </div>
