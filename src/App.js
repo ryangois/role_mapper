@@ -9,38 +9,31 @@ function App() {
   const [teams, setTeams] = useState([
     {
       name: 'Programação',
-      primaryColor: '#D9F7E9',
-      secondaryColor: '#57C278'
+      color: '#57C278'
     },
     {
       name: 'Front-End',
-      primaryColor: '#E8F8FF',
-      secondaryColor: '#82CFFA'
+      color: '#82CFFA'
     },
     {
       name: 'Data Science',
-      primaryColor: '#F0F8E2',
-      secondaryColor: '#A6D157'
+      color: '#A6D157'
     },
     {
       name: 'Devops',
-      primaryColor: '#FDE7E8',
-      secondaryColor: '#E06B69'
+      color: '#E06B69'
     },
     {
       name: 'UX e Design',
-      primaryColor: '#FAE9F5',
-      secondaryColor: '#DB6EBF'
+      color: '#DB6EBF'
     },
     {
       name: 'Mobile',
-      primaryColor: '#FFF5D9',
-      secondaryColor: '#FFBA05'
+      color: '#FFBA05'
     },
     {
       name: 'Inovação e Gestão',
-      primaryColor: '#FFEEDF',
-      secondaryColor: '#FF8A29'
+      color: '#FF8A29'
     },
   ])
 
@@ -170,7 +163,7 @@ function App() {
   function teamColorChange(color, name) {
     setTeams(teams.map(team => {
       if (team.name === name) {
-        team.secondaryColor = color;
+        team.color = color;
       }
       return team;
     }));
