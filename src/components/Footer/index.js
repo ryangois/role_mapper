@@ -28,7 +28,7 @@ const Footer = () => {
             </section>
             <section>
                 <p>
-                    Desenvolvido por Alura.
+                    Developed by Ryan Gois.
                 </p>
             </section>
         </footer>)

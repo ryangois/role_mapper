@@ -1,5 +1,6 @@
 .button {
     background: var(--primary-color);
+    opacity: 0.8;
     border-radius: 10px;
     font-weight: 700;
     font-size: 18px;
@@ -12,4 +13,5 @@
 
 .button:hover {
     background: var(--primary-color);
+    opacity: 1;
 }
