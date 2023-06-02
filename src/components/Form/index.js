@@ -7,9 +7,11 @@ import './form.css'
 const Form = ({ onRegister, teams }) => {
 
     const [name, setName] = useState('')
-    const [role, setCargo] = useState('')
-    const [image, setImagem] = useState('')
-    const [team, setTime] = useState('')
+    const [role, setRole] = useState('')
+    const [image, setImage] = useState('')
+    const [team, setTeam] = useState('')
+    const [teamName, setTeamName] = useState('')
+    const [teamColor, setTeamColor] = useState('')
 
     const onSumited = (event) => {
         event.preventDefault()
@@ -38,22 +40,40 @@ const Form = ({ onRegister, teams }) => {
                     label='Role'
                     placeholder='Inform the role'
                     value={role}
-                    onChanged={value => setCargo(value)}
+                    onChanged={value => setRole(value)}
                 />
                 <TextField
                     required={true}
                     label='GitHub'
                     placeholder='Inform the username'
-                    onChanged={value => setImagem(value)}
+                    onChanged={value => setImage(value)}
                 />
                 <Select
                     required={true}
                     label='Team'
                     items={teams}
                     value={team}
-                    onChanged={value => setTime(value)}
+                    onChanged={value => setTeam(value)}
                 />
                 <Button text='Create Card' />
+            </form>
+            <form className="form" onSubmit={onSumited}>
+                <h2>Fill out the form to create a new team</h2>
+                <TextField
+                    required
+                    label='Name'
+                    placeholder='Write the team name'
+                    value={name}
+                    onChanged={value => setTeamName(value)}
+                />
+                <TextField
+                    required
+                    label='Color'
+                    placeholder='Inform the team color'
+                    value={role}
+                    onChanged={value => setTeamColor(value)}
+                />
+                <Button text='Create a new team' />
             </form>
         </section>
     )

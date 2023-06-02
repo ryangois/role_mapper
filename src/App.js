@@ -198,7 +198,10 @@ function App() {
   return (
     <div>
       <Banner />
-      <Form teams={teams.map(team => team.name)} onRegister={colaborator => setColaborators([...colaborators, colaborator])} />
+      <Form
+        teams={teams.map(team => team.name)}
+        onRegister={colaborator => setColaborators([...colaborators, colaborator])}
+      />
       <section className="teams">
         <h1>My organization</h1>
         {teams.map((team, indice) =>
