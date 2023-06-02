@@ -47,13 +47,16 @@ function App() {
 
   const inicial = [
     {
-      id: uuidv4(), name: 'Ryan Gois',
+      id: uuidv4(),
+      favorite: false,
+      name: 'Ryan Gois',
       role: 'Desenvolvedor de software',
       image: 'ryangois',
       team: teams[0].name
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'GUILHERME LIMA',
       role: 'Desenvolvedor Python e JavaScript na Alura',
       image: 'guilhermeonrails',
@@ -61,6 +64,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'PAULO SILVEIRA',
       role: 'Hipster e CEO da Alura',
       image: 'peas',
@@ -68,6 +72,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'Ryan Gois',
       role: 'Desenvolvedor de software',
       image: 'ryangois',
@@ -75,6 +80,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'DANIEL ARTINE',
       role: 'Engenheiro de Software na Stone Age',
       image: 'danielartine',
@@ -82,6 +88,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'GUILHERME LIMA',
       role: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	guilhermeonrails',
@@ -89,6 +96,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'PAULO SILVEIRA',
       role: 'Hipster e CEO da Alura',
       image: 'peas',
@@ -96,6 +104,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'Ryan Gois',
       role: 'Desenvolvedor de software',
       image: 'ryangois',
@@ -103,6 +112,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'GUILHERME LIMA',
       role: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	guilhermeonrails',
@@ -110,6 +120,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'PAULO SILVEIRA',
       role: 'Hipster e CEO da Alura',
       image: 'peas',
@@ -117,6 +128,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'Ryan Gois',
       role: 'Desenvolvedor de software',
       image: 'ryangois',
@@ -124,6 +136,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'GUILHERME LIMA',
       role: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	guilhermeonrails',
@@ -131,6 +144,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'PAULO SILVEIRA',
       role: 'Hipster e CEO da Alura',
       image: 'peas',
@@ -138,6 +152,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'Ryan Gois',
       role: 'Desenvolvedor de software',
       image: 'ryangois',
@@ -145,6 +160,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'GUILHERME LIMA',
       role: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	guilhermeonrails',
@@ -152,6 +168,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'PAULO SILVEIRA',
       role: 'Hipster e CEO da Alura',
       image: 'peas',
@@ -159,6 +176,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'Ryan Gois',
       role: 'Desenvolvedor de software',
       image: 'ryangois',
@@ -166,6 +184,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'GUILHERME LIMA',
       role: 'Desenvolvedor Python e JavaScript na Alura',
       image: 'guilhermeonrails',
@@ -173,6 +192,7 @@ function App() {
     },
     {
       id: uuidv4(),
+      favorite: false,
       name: 'PAULO SILVEIRA',
       role: 'Hipster e CEO da Alura',
       image: 'peas',
@@ -199,6 +219,15 @@ function App() {
     setTeams([...teams, { ...newTeam, id: uuidv4() }])
   }
 
+  function favoriteResolve(id) {
+    setColaborators(colaborators.map(colaborator => {
+      if (colaborator.id === id) {
+        colaborator.favorite = !colaborator.favorite
+      }
+      return colaborator
+    }))
+  }
+
   return (
     <div>
       <Banner />
@@ -211,6 +240,7 @@ function App() {
         <h1>My organization</h1>
         {teams.map((team, indice) =>
           <Team
+            onFavorite={favoriteResolve}
             changeColor={teamColorChange}
             key={indice}
             team={team}

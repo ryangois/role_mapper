@@ -1,8 +1,18 @@
 import './colaborator.css'
-import { AiFillCloseCircle } from 'react-icons/ai';
+import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 
-const Colaborator = ({ colaborator, bgColor, onDelete }) => {
+const Colaborator = ({ colaborator, bgColor, onDelete, onFavorite }) => {
     let userGitHub = "https://github.com/" + colaborator.image
+
+    function favorite() {
+        onFavorite(colaborator.id)
+    }
+
+    const favoriteProps = {
+        size: 35,
+        onClick: favorite
+    }
+
     return (
         <div className="colaborator">
             <AiFillCloseCircle
@@ -17,8 +27,10 @@ const Colaborator = ({ colaborator, bgColor, onDelete }) => {
                 <h4>{colaborator.name}</h4>
                 <h5>{colaborator.role}</h5>
                 <div className='favorite'>
-                    {colaborator.favorite ? 'favorited' : 'not favorited'}
-
+                    {colaborator.favorite
+                        ? <AiFillHeart {...favoriteProps} fill='#FF0000'/>
+                        : <AiOutlineHeart {...favoriteProps}/>
+                    }
                 </div>
             </div>
         </div>)
