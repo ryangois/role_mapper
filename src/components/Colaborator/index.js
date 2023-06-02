@@ -16,6 +16,10 @@ const Colaborator = ({ colaborator, bgColor, onDelete }) => {
             <div className="footer">
                 <h4>{colaborator.name}</h4>
                 <h5>{colaborator.role}</h5>
+                <div className='favorite'>
+                    {colaborator.favorite ? 'favorited' : 'not favorited'}
+
+                </div>
             </div>
         </div>)
 }

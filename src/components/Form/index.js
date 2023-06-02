@@ -82,7 +82,7 @@ const Form = ({ onRegister, teams, registerTeam }) => {
                     value={teamColor}
                     onChanged={value => setTeamColor(value)}
                 />
-                <Button text='Create a new team' />
+                <Button text='Create Team' />
             </form>
         </section>
     )
