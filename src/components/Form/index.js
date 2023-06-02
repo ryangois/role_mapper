@@ -29,8 +29,32 @@ const Form = ({ onRegister, teams, registerTeam }) => {
 
     return (
         <section className="form-container">
+            <form className="form" onSubmit={(event) => {
+                event.preventDefault()
+                registerTeam({ name: teamName, color: teamColor })
+                setTeamName("")
+                setTeamColor("")
+            }}>
+                <h2>Create a new team</h2>
+                <TextField
+                    required
+                    label='Name'
+                    placeholder='Write the team name'
+                    value={teamName}
+                    onChanged={value => setTeamName(value)}
+                />
+                <TextField
+                    required
+                    type='color'
+                    label='Color'
+                    placeholder='Inform the team color'
+                    value={teamColor}
+                    onChanged={value => setTeamColor(value)}
+                />
+                <Button text='Create Team' />
+            </form>
             <form className="form" onSubmit={onSumited}>
-                <h2>Create the collaborator's card</h2>
+                <h2>Create the colaborator card</h2>
                 <TextField
                     required={true}
                     label='Name'
@@ -59,30 +83,6 @@ const Form = ({ onRegister, teams, registerTeam }) => {
                     onChanged={value => setTeam(value)}
                 />
                 <Button text='Create Card' />
-            </form>
-            <form className="form" onSubmit={(event) => {
-                event.preventDefault()
-                registerTeam({ name: teamName, color: teamColor })
-                setTeamName("")
-                setTeamColor("")
-            }}>
-                <h2>Create a new team</h2>
-                <TextField
-                    required
-                    label='Name'
-                    placeholder='Write the team name'
-                    value={teamName}
-                    onChanged={value => setTeamName(value)}
-                />
-                <TextField
-                    required
-                    type='color'
-                    label='Color'
-                    placeholder='Inform the team color'
-                    value={teamColor}
-                    onChanged={value => setTeamColor(value)}
-                />
-                <Button text='Create Team' />
             </form>
         </section>
     )
