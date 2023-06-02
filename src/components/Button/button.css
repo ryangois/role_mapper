@@ -1,5 +1,5 @@
 .button {
-    background: #6278F7;
+    background: var(--primary-color);
     border-radius: 10px;
     font-weight: 700;
     font-size: 18px;
@@ -11,5 +11,5 @@
 }
 
 .button:hover {
-    color: #95FFD4;
+    background: var(--primary-color);
 }
