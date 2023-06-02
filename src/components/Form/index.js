@@ -22,12 +22,15 @@ const Form = ({ onRegister, teams, registerTeam }) => {
             team
         })
         setName("")
+        setRole("")
+        setImage("")
+        setTeam("")
     }
 
     return (
         <section className="form-container">
             <form className="form" onSubmit={onSumited}>
-                <h2>Fill out the form to create the collaborator's card</h2>
+                <h2>Create the collaborator's card</h2>
                 <TextField
                     required={true}
                     label='Name'
@@ -63,7 +66,7 @@ const Form = ({ onRegister, teams, registerTeam }) => {
                 setTeamName("")
                 setTeamColor("")
             }}>
-                <h2>Fill out the form to create a new team</h2>
+                <h2>Create a new team</h2>
                 <TextField
                     required
                     label='Name'
@@ -73,6 +76,7 @@ const Form = ({ onRegister, teams, registerTeam }) => {
                 />
                 <TextField
                     required
+                    type='color'
                     label='Color'
                     placeholder='Inform the team color'
                     value={teamColor}
