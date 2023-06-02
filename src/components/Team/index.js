@@ -8,7 +8,9 @@ const Team = ({ team, colaborators, onDelete, changeColor }) => {
             <input onChange={event => changeColor(event.target.value, team.id)} value={team.color} type='color' className='color-input' />
             <h3 style={{ borderColor: team.color }}>{team.name}</h3>
             <div className='colaborators'>
-                {colaborators.map((colaborator, indice) => <Colaborator key={indice} colaborator={colaborator} corDeFundo={team.color} onDelete={onDelete} />)}
+                {colaborators.map((colaborator, indice) => {
+                    return <Colaborator key={indice} colaborator={colaborator} bgColor={team.color} onDelete={onDelete} />
+                })}
             </div>
         </section>
     )

@@ -180,10 +180,10 @@ function App() {
     },
   ]
 
-  const [colaborators, setColaboradores] = useState(inicial)
+  const [colaborators, setColaborators] = useState(inicial)
 
-  function deleteColaborator() {
-    console.log('deletando colaborator');
+  function deleteColaborator(id) {
+    setColaborators(colaborators.filter(colaborator => colaborator.id !== id))
   }
 
   function teamColorChange(color, id) {
@@ -198,7 +198,7 @@ function App() {
   return (
     <div>
       <Banner />
-      <Form teams={teams.map(team => team.name)} onRegister={colaborator => setColaboradores([...colaborators, colaborator])} />
+      <Form teams={teams.map(team => team.name)} onRegister={colaborator => setColaborators([...colaborators, colaborator])} />
       <section className="teams">
         <h1>My organization</h1>
         {teams.map((team, indice) =>
