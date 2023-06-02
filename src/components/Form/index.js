@@ -4,7 +4,7 @@ import TextField from '../TextField'
 import Select from '../Select'
 import './form.css'
 
-const Form = ({ onRegister, teams }) => {
+const Form = ({ onRegister, teams, registerTeam }) => {
 
     const [name, setName] = useState('')
     const [role, setRole] = useState('')
@@ -57,20 +57,25 @@ const Form = ({ onRegister, teams }) => {
                 />
                 <Button text='Create Card' />
             </form>
-            <form className="form" onSubmit={onSumited}>
+            <form className="form" onSubmit={(event) => {
+                event.preventDefault()
+                registerTeam({ name: teamName, color: teamColor })
+                setTeamName("")
+                setTeamColor("")
+            }}>
                 <h2>Fill out the form to create a new team</h2>
                 <TextField
                     required
                     label='Name'
                     placeholder='Write the team name'
-                    value={name}
+                    value={teamName}
                     onChanged={value => setTeamName(value)}
                 />
                 <TextField
                     required
                     label='Color'
                     placeholder='Inform the team color'
-                    value={role}
+                    value={teamColor}
                     onChanged={value => setTeamColor(value)}
                 />
                 <Button text='Create a new team' />
