@@ -73,6 +73,7 @@ const Form = ({ onRegister, teams, registerTeam }) => {
                     required={true}
                     label='GitHub'
                     placeholder='Inform the username'
+                    value={image}
                     onChanged={value => setImage(value)}
                 />
                 <Select
