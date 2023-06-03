@@ -3,6 +3,7 @@ import Button from '../Button'
 import TextField from '../TextField'
 import Select from '../Select'
 import './form.css'
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = ({ onRegister, teams, registerTeam }) => {
 
@@ -19,7 +20,8 @@ const Form = ({ onRegister, teams, registerTeam }) => {
             name,
             role,
             image,
-            team
+            team,
+            id: uuidv4()
         })
         setName("")
         setRole("")

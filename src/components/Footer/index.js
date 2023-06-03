@@ -14,17 +14,17 @@ const Footer = () => {
             <section>
                 <ul>
                     <li>
-                        <a href="twitter.com" target="_blank">
+                        <a href="twitter.com" target="_blank" rel="noreferrer">
                             <AiOutlineTwitter {...socialLinks} />
                         </a>
                     </li>
                     <li>
-                        <a href="https://instagram.com/ryan.gois" target="_blank">
+                        <a href="https://instagram.com/ryan.gois" target="_blank" rel="noreferrer">
                             <AiOutlineInstagram {...socialLinks} />
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/ryangois" target="_blank">
+                        <a href="https://github.com/ryangois" target="_blank" rel="noreferrer">
                             <AiFillGithub {...socialLinks} />
                         </a>
                     </li>
