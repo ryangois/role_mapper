@@ -1,24 +1,31 @@
 
 import './footer.css'
+import { AiFillGithub, AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
 
 const Footer = () => {
+
+    const socialLinks = {
+        size: 42,
+        fill: '#FFFFFF'
+    }
+
     return (
         <footer className="page-footer">
             <section>
                 <ul>
                     <li>
-                        <a href="facebook.com" target="_blank">
-                            <img src="/images/facebook.png" alt="" />
-                        </a>
-                    </li>
-                    <li>
                         <a href="twitter.com" target="_blank">
-                            <img src="/images/twitter.png" alt="" />
+                            <AiOutlineTwitter {...socialLinks} />
                         </a>
                     </li>
                     <li>
-                        <a href="instagram.com" target="_blank">
-                            <img src="/images/instagram.png" alt="" />
+                        <a href="https://instagram.com/ryan.gois" target="_blank">
+                            <AiOutlineInstagram {...socialLinks} />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ryangois" target="_blank">
+                            <AiFillGithub {...socialLinks} />
                         </a>
                     </li>
                 </ul>
