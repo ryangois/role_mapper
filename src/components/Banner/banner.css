@@ -1,8 +1,17 @@
-.header {
+.banner-header {
     background-color: var(--primary-color);
     text-align: center;
+    width: 100%;
+    background-image: url('../../../public/images/background.png');
+    background-size: contain;
 }
 
-.header img {
-    max-width: 100%;
+.banner-header img {
+    padding-top: 20px;
+}
+
+.banner-header h2 {
+    padding: 20px;
+    color: #FFFFFF;
+    font-size: 1rem;
 }

@@ -3,6 +3,7 @@
     padding: 32px;
     background-blend-mode: multiply;
     position: relative;
+    background-size: contain;
 }
 
 .team h3 {

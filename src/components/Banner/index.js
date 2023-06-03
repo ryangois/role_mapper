@@ -2,8 +2,9 @@ import './banner.css'
 
 const Banner = () => {
     return (
-        <header className="header">
-            <img src='/images/banner.png' alt='Role Mapper Logo' />
+        <header className="banner-header">
+            <img id='banner-logo' src='/images/logo.png' />
+            <h2>Organize your Team</h2>
         </header>)
 }
 
