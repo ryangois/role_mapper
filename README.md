@@ -20,12 +20,12 @@ Role Mapper is a web application that allows you to visualize and map out the ro
 - **Role Visualization**: Visualize the roles and responsibilities in a clear and interactive manner.
 - **User-friendly Interface**: Simple and intuitive interface for easy navigation and usage.
 
-## Future Features {#future-features}
+## Future Features <a id="future-features"></a>
 
 - **Login**
 - **Local Save**
 
-## Demo {#demo}
+## Demo <a id="demo"></a>
 
 A live demo of the Role Mapper application is available at [https://role-mapper.vercel.app/](https://role-mapper.vercel.app/).
 
@@ -66,12 +66,12 @@ Once you have the application running, you can use it to create and manage roles
 
 5. **Visualizing Roles**: Click on the "Visualize Roles" button to view a visual representation of the roles and their assigned responsibilities.
 
-## Contributing {#contributing}
+## Contributing <a id="contributing"></a>
 
 Contributions to Role Mapper are welcome! If you find any bugs or have suggestions for new features, please open an issue on the [GitHub repository](https://github.com/your-username/role-mapper). If you would like to contribute code, you can create a pull request with your changes.
 
 Please ensure that you adhere to the [code of conduct](CODE_OF_CONDUCT.md) when contributing to this project.
 
-## License {#license}
+## License <a id="license"></a>
 
 Role Mapper is released under the [MIT License](LICENSE).
