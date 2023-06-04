@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+<h1 align="center">Role Mapper</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Role Mapper is a web application that allows you to visualize and map out the roles and responsibilities within a team or organization. It provides a user-friendly interface for creating, editing, and managing roles, and allows you to easily assign responsibilities to individuals or teams.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Future Features](#future-features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Features<a id="features"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Role Creation**: Create and manage roles within your team or organization.
+- **Responsibility Mapping**: Assign responsibilities to individual roles.
+- **Team Collaboration**: Collaborate with team members to define and refine roles and responsibilities.
+- **Role Visualization**: Visualize the roles and responsibilities in a clear and interactive manner.
+- **User-friendly Interface**: Simple and intuitive interface for easy navigation and usage.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Future Features {#future-features}
 
-### `npm test`
+- **Login**
+- **Local Save**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo {#demo}
 
-### `npm run build`
+A live demo of the Role Mapper application is available at [https://role-mapper.vercel.app/](https://role-mapper.vercel.app/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started {#getting-started}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the Role Mapper application locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+```
+git clone https://github.com/your-username/role-mapper.git
+```
+2. Navigate to the project directory:
+```
+cd role-mapper
+```
+3. Install the dependencies:
+```
+npm install
+```
+4. Start the development server:
+``` 
+npm start
+```
 
-### `npm run eject`
+5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to access the Role Mapper application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage <a id="usage"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once you have the application running, you can use it to create and manage roles within your team or organization. Here's a brief guide on how to use the application:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Creating a Role**: Click on the "Add Role" button to create a new role. Provide a name and description for the role.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Assigning Responsibilities**: Click on a role to view its details. From there, you can assign responsibilities to the role by clicking on the "Assign Responsibilities" button. You can assign multiple responsibilities to a role.
 
-## Learn More
+3. **Editing a Role**: To edit a role, click on the role card and click on the "Edit" button. You can update the name, description, and assigned responsibilities for the role.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Deleting a Role**: To delete a role, click on the role card and click on the "Delete" button. Note that deleting a role will also remove any assigned responsibilities.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Visualizing Roles**: Click on the "Visualize Roles" button to view a visual representation of the roles and their assigned responsibilities.
 
-### Code Splitting
+## Contributing {#contributing}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions to Role Mapper are welcome! If you find any bugs or have suggestions for new features, please open an issue on the [GitHub repository](https://github.com/your-username/role-mapper). If you would like to contribute code, you can create a pull request with your changes.
 
-### Analyzing the Bundle Size
+Please ensure that you adhere to the [code of conduct](CODE_OF_CONDUCT.md) when contributing to this project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License {#license}
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Role Mapper is released under the [MIT License](LICENSE).
