@@ -29,7 +29,7 @@ Role Mapper is a web application that allows you to visualize and map out the ro
 
 A live demo of the Role Mapper application is available at [https://role-mapper.vercel.app/](https://role-mapper.vercel.app/).
 
-## Getting Started {#getting-started}
+## Getting Started <a id="getting-started"></a>
 
 To run the Role Mapper application locally, follow these steps:
 
